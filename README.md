@@ -12,3 +12,8 @@
 3.  Convert excel files to numpy structured or record arrays. 
 
     https://gist.github.com/Dan-Patterson/d01837284aa6b3b77511c2f92a476c0b
+
+4.  Vincenty's distance and bearing calculations.
+
+    https://gist.github.com/Dan-Patterson/137a5492080b9bd914dcaa0656ccdb77
+
