@@ -17,3 +17,6 @@
 
     https://gist.github.com/Dan-Patterson/137a5492080b9bd914dcaa0656ccdb77
 
+5.  svg display for numpy polygon/polyline geometries
+
+    https://gist.github.com/Dan-Patterson/6dc36d7afe28e4095457bccf84860b20
