@@ -67,8 +67,24 @@ def _svg(g, as_polygon=True):
         GA = False
         if g.ndim == 2:
             g_bits = [g]
-        elif g.ndim == 3 or g.dtype.kind == 'O':
-            g_bits = [i for i in g_bits]
+            L, B = g.min(axis=0)
+            R, T = g.max(axis=0)
+        elif g.ndim == 3:
+            g_bits = [g[i] for i in range(g.shape[0])]
+            L, B = g.min(axis=(0, 1))
+            R, T = g.max(axis=(0, 1))
+        elif g.dtype.kind == 'O':
+            g_bits = []
+            for i, b in enumerate(g):
+                b = np.array(b)
+                if b.ndim == 2:
+                    g_bits.append(b)
+                elif b.ndim == 3:
+                    g_bits.extend([b[i] for i in range(b.shape[0])])
+            L, B = np.min(np.vstack([np.min(i, axis=0) for i in g_bits]),
+                          axis=0)
+            R, T = np.max(np.vstack([np.max(i, axis=0) for i in g_bits]),
+                          axis=0)
         else:
             print(msg1)
             return None
@@ -81,8 +97,7 @@ def _svg(g, as_polygon=True):
         o_f_s = ["0.75", "red", "black"]  # opacity, fill_color, stroke color
     else:
         o_f_s = ["1.0", "none", "red"]
-    L, B = g.min(axis=0)
-    R, T = g.max(axis=0)
+    # ----
     d_x, d_y = (R - L, T - B)
     hght = min([max([100., d_y]), 200])
     width = int(d_x/d_y * hght)
