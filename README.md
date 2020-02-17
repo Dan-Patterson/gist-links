@@ -23,4 +23,5 @@
 
 6.  winding and crossing numbers for point-in-polygon analysis
 
-    https://github.com/Dan-Patterson/gist-links/blob/master/Scripts/winding_crossing_numbers.py
+    https://gist.github.com/Dan-Patterson/67d59f7e20130a61f64bb7d0cdc7e0d2
+    
