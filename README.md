@@ -20,3 +20,7 @@
 5.  svg display for numpy polygon/polyline geometries
 
     https://gist.github.com/Dan-Patterson/6dc36d7afe28e4095457bccf84860b20
+
+6.  winding and crossing numbers for point-in-polygon analysis
+
+    https://github.com/Dan-Patterson/gist-links/blob/master/Scripts/winding_crossing_numbers.py
