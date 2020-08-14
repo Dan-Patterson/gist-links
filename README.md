@@ -27,4 +27,5 @@
     
 7.  conda package dependency finders
 
-    https://github.com/Dan-Patterson/gist-links/blob/master/Scripts/CondaPkgs.py
+    https://gist.github.com/Dan-Patterson/a34b9fff5ee07a8ff53c9431782e2575
+
